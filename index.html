@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculate BMI</title>
+    <link rel="stylesheet" href="./assets/style/style.css" />
+      <link rel="stylesheet" href="./assets/style/responsive.css">
+    <link rel="icon" href="./assets/src/icon/favIcon.png" type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <!-- Alert  -->
+    <div class="alert">
+      <div class="alert__circle"></div>
+      <p class="alert__text"></p>
+  </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav pd-2">
+                <a href="#" class="nav-log">
+                    <img src="./assets/src/img/bodybuilding-gym-logo_177315-2.jpg" alt="Logo" class="nav-logo__img">
+                </a>
+                <ul class="nav-menu">
+                    <li class="nav-menu__item"><a href="#" class="nav-menu__link active">Home</a></li>
+                    <li class="nav-menu__item"><a href="#products" class="nav-menu__link">Product</a></li>
+                    <li class="nav-menu__item"><a href="#clock" class="nav-menu__link">Clock</a></li>
+                    <li class="nav-menu__item"><a href="#slider" class="nav-menu__link">Slider</a></li>
+                    <li class="nav-menu__item"><a href="#promise" class="nav-menu__link">Promise</a></li>
+                </ul>
+            </nav>
+           <div class="bni-wrapper">
+               <div class="bmi-calc pd-3">
+                   <form action="#" class="form">
+                       <h3 class="bmi-calc__title">Do You Know Your <span>BMI</span> ?!</h3>
+                       <h4 class="bmi-calc__caption">Fill The Below Form To Get Your BMI :)</h4>
+                       <input type="text" class="weight" placeholder="Enter Your weight (Kg) ...">
+                       <input type="text" class="height" placeholder="Enter Your Height (Cm) ...">
+                       <div class="form-btns">
+                           <button class="form-btn" id="bmi-calc" type="submit">Calculate Your BMI</button>
+                           <button class="form-btn" type="reset">Reset Form</button>
+                       </div>
+                   </form>
+               </div>
+               <div class="bmi-result pd-3">
+                   <h3 class="bmi-result__text">the result of your BMI</h3>
+                   <h4 class="bmi-result__alert">Your BMI is : <span class="bmi-resul__final">please fill the form !!</span></h4>
+                   <h5 class="bmi-result__note"></h5>
+                   <div class="bmi-circles">
+                       <div id="underweight" class="bmi-circle underweight"></div>
+                       <div id="normal" class="bmi-circle normal"></div>
+                       <div id="overweight" class="bmi-circle overweight"></div>
+                       <div id="obesity" class="bmi-circle obesity"></div>
+                   </div>
+               </div>
+           </div>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main class="main">
+        <!-- Products Section -->
+        <section id="products" class="products pd-3">
+            <div class="container">
+                <div class="section-head">
+                    <h3 class="section-head__title">Product</h3>
+                    <h4 class="section-head__caption">Spend money for your body !</h4>
+                    <div class="section-head__line"></div>
+                </div>
+                <div class="product-cards">
+                    <div class="product-card">
+                        <div class="product-card__banner">
+                            <img src="./assets/src/img/product%201.webp" alt="Product" loading="lazy" class="product-card__img">
+                            <div class="product-card__add">
+                                <img src="./assets/src/img/plus-104.png" alt="Add Product">
+                            </div>
+                            <div class="product-card__price">
+                                <p> <span>30$</span> | 28$ </p>
+                            </div>
+                        </div>
+                        <div class="product-card__content">
+                            <h4 class="product-card__title">muscle building</h4>
+                            <p class="product-card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet dignissimos dolorem dolorum earum.</p>
+                            <a href="#" class="btn product-card__link">See More ...</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-card__banner">
+                            <img src="./assets/src/img/product%201.webp" alt="Product" loading="lazy" class="product-card__img">
+                            <div class="product-card__add">
+                                <img src="./assets/src/img/plus-104.png" alt="Add Product">
+                            </div>
+                            <div class="product-card__price">
+                                <p> <span>30$</span> | 28$ </p>
+                            </div>
+                        </div>
+                        <div class="product-card__content">
+                            <h4 class="product-card__title">muscle building</h4>
+                            <p class="product-card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet dignissimos dolorem dolorum earum.</p>
+                            <a href="#" class="btn product-card__link">See More ...</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-card__banner">
+                            <img src="./assets/src/img/product%201.webp" alt="Product" loading="lazy" class="product-card__img">
+                            <div class="product-card__add">
+                                <img src="./assets/src/img/plus-104.png" alt="Add Product">
+                            </div>
+                            <div class="product-card__price">
+                                <p> <span>30$</span> | 28$ </p>
+                            </div>
+                        </div>
+                        <div class="product-card__content">
+                            <h4 class="product-card__title">muscle building</h4>
+                            <p class="product-card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet dignissimos dolorem dolorum earum.</p>
+                            <a href="#" class="btn product-card__link">See More ...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product__paginations">
+                    <div class="product__pagination">1</div>
+                    <div class="product__pagination">2</div>
+                    <div class="product__pagination">3</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clock Section -->
+        <section id="clock" class="clock pd-3">
+            <div class="container">
+                <div class="section-head">
+                    <h3 class="section-head__title">Clock</h3>
+                    <h4 class="section-head__caption">Harry up time is limited !</h4>
+                    <div class="section-head__line"></div>
+                </div>
+                <div class="clock__note">
+                    Current time is :
+                </div>
+                <div class="clock__container">
+                    <div class="timer hour">13</div>
+                    <span class="timer">:</span>
+                    <div class="timer minute">12</div>
+                    <span class="timer">:</span>
+                    <div class="timer second">23</div>
+                </div>
+                <div class="clock__alert">
+                    <h3 class="clock__title">Sale of product is finished at <span> 9 P.M.</span></h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slider Section -->
+        <section id="slider" class="slider pd-3">
+            <div class="container">
+                <div class="section-head">
+                    <h3 class="section-head__title">Slider</h3>
+                    <h4 class="section-head__caption">every one can improve yourself !</h4>
+                    <div class="section-head__line"></div>
+                </div>
+                <div class="slider-items">
+                    <div class="slider-item">
+                        <img src="./assets/src/img/slider1.jpg" alt="Slider" class="slider-item__img">
+                    </div>
+                    <button type="button" class="slider__btn slider-item__prev" ><i class="fa fa-angle-left"></i></button>
+                    <button type="button" class="slider__btn slider-item__next" ><i class="fa fa-angle-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promise Parte -->
+        <section id="promise" class="promise pd-3">
+            <div class="container">
+                <div class="section-head">
+                    <h3 class="section-head__title">Promise</h3>
+                    <h4 class="section-head__caption">Where there is a wish, there is a way ...</h4>
+                    <div class="section-head__line"></div>
+                </div>
+                <div class="promise-head">
+                    <h4 class="promise__title">Share Your Promise ... </h4>
+                </div>
+                <div class="promise__wrapper">
+                    <div class="promise-content">
+                        <form action="#" class="promise__form">
+                            <input type="text" id="user-name" placeholder="Enter Your Name ">
+                            <textarea name="" id="user-message" cols="30" rows="10" placeholder="Enter Your message ..."></textarea>
+                            <button type="submit" id="user-share" class="btn promise__link">Share it ...</button>
+                        </form>
+                    </div>
+                    <div class="promise-cards">
+                        <div class="promise-card">
+                            <h5 class="promise-card__user">Muhmd77 Says :</h5>
+                            <p class="promise-card__message">I Can Improve Myself !</p>
+                            <span class="promise-card__time">12/30/2022</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer__text">Develpe By <span>Muhmd77</span></p>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
